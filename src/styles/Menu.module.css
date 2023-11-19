@@ -1,0 +1,14 @@
+.home_img{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.menu_bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    color: rgb(119, 106, 106);
+}
+.menu_bar a img{
+    margin: 1rem 2rem;
+}
