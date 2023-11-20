@@ -1,10 +1,11 @@
 import Styles from "../styles/Snap.module.css";
 import { useContext } from "react";
 import { SnapContext } from "../providers/Snap.Context";
+import { Link } from "react-router-dom";
 const Snap = () => {
-  const { snaps, deleteSnap } = useContext(SnapContext);
+  const { snaps, deleteSnap, deletingState } = useContext(SnapContext);
   return (
-    <>
+    <div className="snap_container">
       {snaps.map((snap) => {
         return (
           <div
@@ -19,15 +20,18 @@ const Snap = () => {
               <button
                 onClick={() => deleteSnap(snap.id)}
                 type="button"
-                class="btn btn-light"
+                className="btn btn-light"
               >
-                Delete Snap
+                {deletingState[snap.id] ? "Deleting" : "Delete Snap"}
               </button>
+              <Link to={`/edit/${snap.id}`} className="btn btn-light">
+                Update
+              </Link>
             </div>
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 export default Snap;

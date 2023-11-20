@@ -2,8 +2,26 @@
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
+  flex-direction: row;
   max-height: 88vh;
 }
 .snap_container::-webkit-scrollbar{
   display: none;
+}
+.spinner{
+  margin-top: 15rem;
+}
+.create_snap{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem ;
+  background-color: antiquewhite;
+  height: 88vh;
+}
+.create_snap input{
+  width: 26rem;
+}
+.create_snap button{
+  margin-top: 2rem;
 }

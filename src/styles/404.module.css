@@ -1,0 +1,15 @@
+.body {
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    color: #555;
+}
+
+p {
+    font-size: 1.2em;
+    color: #777;
+}

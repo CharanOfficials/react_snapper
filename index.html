@@ -9,5 +9,11 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>$(document).mousemove(function (event) {
+        $('.torch').css({
+          'top': event.pageY,
+          'left': event.pageX
+        });
+      });</script>
   </body>
 </html>
